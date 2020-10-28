@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <title>Attestation</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.4/examples/floating-labels/floating-labels.css">
+    <script src="script.js"></script>
+    <style>
+        ul {
+            list-style: none;
+            column-count: 2;
+            /* column-gap: 2rem; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-signin">
+        <form id="form-profile">
+            <div class="text-center mb-4">
+                <img class="mb-4 rounded" src="apple-touch-icon.png" alt="" width="72" height="72">
+                <h1 class="h3 mb-3 font-weight-normal">Attestation</h1>
+            </div>
+            <div class="form-label-group">
+                <input type="text" id="field-firstname" autocomplete="first-name" placeholder="Prénom" class="form-control">
+                <label for="field-firstname">Prénom</label>
+            </div>
+            <div class="form-label-group">
+                <input type="text" id="field-lastname" autocomplete="last-name" placeholder="Nom" class="form-control">
+                <label for="field-lastname">Nom</label>
+            </div>
+            <div class="form-label-group">
+                <input type="text" id="field-address" autocomplete="address-line1" placeholder="Adresse" class="form-control">
+                <label for="field-address">Adresse</label>
+            </div>
+            <div class="form-label-group">
+                <input type="text" id="field-zipcode" autocomplete="zipcode" placeholder="Code postal" class="form-control" inputmode="numeric" maxlength="5">
+                <label for="field-zipcode">Code postal</label>
+            </div>
+            <div class="form-label-group">
+                <input type="text" id="field-town" autocomplete="address-level1" placeholder="Ville" class="form-control">
+                <label for="field-town">Ville</label>
+            </div>
+            <div class="form-label-group">
+                <input type="tel" id="field-birthday" autocomplete="bday" placeholder="Date de naissance" class="form-control" maxlength="10">
+                <label for="field-birthday">Date de naissance</label>
+            </div>
+        </form>
+        <form id="form-profile">
+            <!--  for Safari Autofill to work -->
+            <div class="form-label-group">
+                <input type="text" id="field-lieunaissance" placeholder="Lieu de naissance" class="form-control">
+                <label for="field-lieunaissance">Lieu de naissance</label>
+            </div>
+            <div class="form-label-group">
+                <div class="checkbox mb-3">
+                    <label>Motif :</label>
+                    <ul>
+                        <li><label><input type="checkbox" id="checkbox-travail" name="field-reason" value="travail"> Travail</label></li>
+                        <li><label><input type="checkbox" id="checkbox-sport" name="field-reason" value="sport"> Sport</label></li>
+                        <li><label><input type="checkbox" id="checkbox-courses" name="field-reason" value="courses"> Courses</label></li>
+                        <li><label><input type="checkbox" id="checkbox-sante" name="field-reason" value="sante"> Santé</label></li>
+                        <li><label><input type="checkbox" id="checkbox-famille" name="field-reason" value="famille"> Famille</label></li>
+                        <li><label><input type="checkbox" id="checkbox-missions" name="field-reason" value="missions"> Intérêt général</label></li>
+                        <input type="checkbox" id="checkbox-judiciaire" name="field-reason" value="judiciaire" style="display: None">
+                    </ul>
+                </div>
+            </div>
+            <div style="display: None">
+                <input type="date" id="field-datesortie" name="datesortie">
+                <input type="time" id="field-heuresortie" name="heure">
+                <div id="generate-btn"></div>
+                <p id="version"></p>
+            </div>
+        </form>
+        <button class="btn btn-lg btn-primary btn-block" onclick="createLink()">Générer le lien</button>
+        <div class="mt-3 text-center" id="link"><a onclick="onLoad()"></a></div>
+        <p class="mt-5 mb-3 text-muted text-center">Aucune donnée personnelle n'est conservée.</p>
+    </div>
+</body>
+<script src="deplacement-covid-19/certificate.38b21110.js"></script>
+
+</html>
